@@ -12,7 +12,7 @@ package resource.datos;
  * 
  */
 
-public class Persona {
+public class BD {
 
 	
 	
