@@ -4,6 +4,7 @@
 package resource.datos;
 
 import java.util.ArrayList;
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
@@ -28,19 +29,24 @@ public final class ContenedorDeDatos {
 	 * Variable que contiene una lista con nombres y dos apellidos.
 	 */
 	private final List<String> listaNombresApellidos = new ArrayList<>(
-			Arrays.asList("Áurea Gabriel Quijano", "Ovidia Flavio Arriola", "Violeta Adelia Ojeda", //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-					"Norberto Margarita Domínguez", "María José Rosa María Villa", "Aurora Valeria Casales", //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-					"Silvio Rodolfo Machado", "Donato Dolores Figueroa", "Rosaura Pastor Ureña", "Justino Sofía Araujo", //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ //$NON-NLS-4$
-					"José Antonio Maricruz Villaverde", "Ana María Marciano Márquez", "José Ángel Ariel Roldán", //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-					"Francisco Javier Alejandra María", "Mireya Vinicio Muñoz", "Rosalva Regina Torres", //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-					"Norberto Kike Iglesias", "Heriberto Héctor Pantoja", "Pacífica Jennifer Contreras", //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-					"Ginés Ofelia Basurto")); //$NON-NLS-1$
+			Arrays.asList("Áurea Gabriel Quijano", "Ovidia Flavio Arriola", "Violeta Adelia Ojeda", 
+					"Norberto Margarita Domínguez", "María José Rosa María Villa", "Aurora Valeria Casales", 
+					"Silvio Rodolfo Machado", "Donato Dolores Figueroa", "Rosaura Pastor Ureña", "Justino Sofía Araujo", 
+					"José Antonio Maricruz Villaverde", "Ana María Marciano Márquez", "José Ángel Ariel Roldán",
+					"Francisco Javier Alejandra María", "Mireya Vinicio Muñoz", "Rosalva Regina Torres", 
+					"Norberto Kike Iglesias", "Heriberto Héctor Pantoja", "Pacífica Jennifer Contreras", 
+					"Ginés Ofelia Basurto")); 
 	/**
 	 * Variable que contiene una lista de nombres.
 	 */
-	private final List<String> listaNombres = new ArrayList<>(Arrays.asList("Bernabé ", "Yolanda", "Lorena", "Nacho", //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ //$NON-NLS-4$
-			"Isaías", "Aitana", "José ", "Angélia", "Catalina", "Sabina", "Raimundo", "Jorge", "Abril", "Ismael", //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ //$NON-NLS-4$ //$NON-NLS-5$ //$NON-NLS-6$ //$NON-NLS-7$ //$NON-NLS-8$ //$NON-NLS-9$ //$NON-NLS-10$
-			"Alexis", "Adelardo", "Fernando", "Rolando", "Matías", "Jenifer")); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ //$NON-NLS-4$ //$NON-NLS-5$ //$NON-NLS-6$
+	private final List<String> listaNombres = new ArrayList<>(Arrays.asList("Bernabé ", "Yolanda", "Lorena", "Nacho", 
+			"Isaías", "Aitana", "José ", "Angélia", "Catalina", "Sabina", "Raimundo", "Jorge", "Abril", "Ismael", 
+			"Alexis", "Adelardo", "Fernando", "Rolando", "Matías", "Jenifer")); 
+	
+	/**
+	 * Constructor por defecto.
+	 */
+	public ContenedorDeDatos() { }
 	
 	
 	/**
@@ -106,7 +112,7 @@ public final class ContenedorDeDatos {
 	 * @return
 	 */
 	public List<String> getListNombresAleatorios(){
-		return this.getListNombresAleatorios(this.getIntAleatorio(MAX_VALOR_LISTA));
+		return this.getLista(0,this.getIntAleatorio(MAX_VALOR_LISTA));
 	}
 	
 	/**
@@ -114,37 +120,7 @@ public final class ContenedorDeDatos {
 	 * @return
 	 */
 	public List<String> getListNombresApellidosAleatorios(){
-		return this.getListNombresApellidosAleatorios(this.getIntAleatorio(MAX_VALOR_LISTA));
-	} 
-	
-	/**
-	 * Método que devuelve una lista del tamaño pasado que contiene nombres.
-	 * @param tamañoLista
-	 * @return
-	 */
-	public List<String> getListNombresAleatorios(int tamañoLista){
-		List<String> list = new ArrayList<>();
-		
-		for(int i = 0; i < tamañoLista; i++) {
-			list.add(this.getNombreAleatorio());
-		}
-		
-		return list;
-	}
-	
-	/**
-	 * Método que devuelve una lista del tamaño pasado que contiene nombres y apellidos.
-	 * @param tamañoLista
-	 * @return
-	 */
-	public List<String> getListNombresApellidosAleatorios(int tamañoLista){
-		List<String> list = new ArrayList<>();
-		
-		for(int i = 0; i < tamañoLista; i++) {
-			list.add(this.getNombreApellidoAleatorio());
-		}
-		
-		return list;
+		return this.getLista(1,this.getIntAleatorio(MAX_VALOR_LISTA));
 	} 
 	
 	/**
@@ -168,6 +144,25 @@ public final class ContenedorDeDatos {
 		return this.getIntAleatorio(this.getListaNombresApellidos().size());
 	}
 	
+	private List<String> getLista(int opcion, int tamañoLista){
+		List<String> list = new ArrayList<>();
+
+		for(int i = 0; i < tamañoLista; i++) {
+			switch(opcion) {
+			case 0:
+				list.add(this.getNombreAleatorio());
+				break;
+			case 1:
+				list.add(this.getNombreApellidoAleatorio());
+				break;
+			default:
+				System.err.println(String.format("No se ha añadido ningún valor en la iteracción %d.\n",i));
+			} 
+			
+		}
+		
+		return list;
+	} 
 	
 	/*
 	 * Getter's
