@@ -1,18 +1,17 @@
 /**
  * 
  */
-package resource.datos;
+package main.utils;
 
 import java.util.MissingResourceException;
 import java.util.ResourceBundle;
-
 
 /**
  * @author Miguel
  *
  */
 public class Messages {
-	private static final String BUNDLE_NAME = "resource.messages"; //$NON-NLS-1$
+	private static final String BUNDLE_NAME = "resource.messages";
 
 	private static final ResourceBundle RESOURCE_BUNDLE = ResourceBundle.getBundle(BUNDLE_NAME);
 

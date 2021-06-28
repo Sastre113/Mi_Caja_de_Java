@@ -1,7 +1,7 @@
 /**
  * 
  */
-package java.BienvenidoAJava;
+package main.Z815.BienvenidoAJava;
 
 /**
  * @author Miguel

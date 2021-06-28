@@ -1,7 +1,7 @@
 /**
  * 
  */
-package java.utils;
+package main.utils;
 
 /**
  * @author Miguel
