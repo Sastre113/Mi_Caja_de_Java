@@ -60,7 +60,7 @@ public enum EMensaje {
 
 		
 	public String getMsg() {
-		return  this.getCodigoError() + ":" + this.getDescripcionError();
+		return  String.format("%s:%s", this.getCodigoError(),this.getDescripcionError());
 	}
 	
 	
@@ -70,7 +70,7 @@ public enum EMensaje {
 	
 
 	private String getCodigoError() {
-		return this.getCodigo() + "_" + this.getServiceName(this) + "_" + this.getId();
+		return String.format("%s_%s_%s", this.getCodigo(),this.getServiceName(this), this.getId());
 	}
 	
 	private String getDescripcionError() {
