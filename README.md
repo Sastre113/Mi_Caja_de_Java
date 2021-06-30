@@ -17,7 +17,7 @@ Versión: 2021-03 (4.19.0)
 Java SE 11
 
 ## Wiki
-Trataré de cumplimentar este repositorio con su propia wiki, donde trataré de recoger comentarios, ideas u opiniones que me surjan durante la elaboración de cualquier código o problema.  
+Trataré de documentar este repositorio con su propia wiki, donde recoger comentarios, ideas u opiniones que me surjan durante la elaboración de cualquier código o problema.  
 <https://github.com/Sastre113/Mi_Caja_de_Java/wiki>
 
 
