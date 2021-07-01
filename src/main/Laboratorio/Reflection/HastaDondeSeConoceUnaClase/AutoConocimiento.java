@@ -12,7 +12,7 @@ public class AutoConocimiento {
 		Jugador hax = new Jugador("Hax",100, false, 1.73);
 		
 		System.out.println("getClass = " + Jugador.class.getDeclaredFields());
-		
+		hax.getClass().getMethods();
 		
 		
 	}
