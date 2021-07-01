@@ -1,7 +1,7 @@
 /**
  * 
  */
-package main.whiteboard.pruebasConEnums;
+package main.Laboratorio.Enums.MensajesInfo;
 
 import java.util.Arrays;
 import java.util.LinkedList;
