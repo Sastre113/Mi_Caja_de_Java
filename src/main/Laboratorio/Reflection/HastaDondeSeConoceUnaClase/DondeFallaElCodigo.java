@@ -32,7 +32,7 @@ public class DondeFallaElCodigo {
 			// Punto en el que nos encontramos
 			currentClass();
 			System.out.println("*****************************************************");
-			System.out.println("Se va a imprimir toda la traza desde aqui.");
+			System.out.println("* 	Se va a imprimir toda la traza desde aqui.  *");
 			System.out.println("*****************************************************");
 			// El camino hasta ahora
 			allStackTrace();
@@ -71,8 +71,7 @@ public class DondeFallaElCodigo {
 			System.out.println(String.format("getClassName -> [ %s ]",element.getClassName()));      
 			System.out.println(String.format("getClassLoaderName -> [ %s ]",element.getClassLoaderName()));
 			System.out.println("*************************************************");
-		}
-		
+		}	
 	}
 	
 }

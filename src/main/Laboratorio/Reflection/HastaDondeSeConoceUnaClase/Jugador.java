@@ -25,7 +25,6 @@ public class Jugador {
 	 * @param alturaCm
 	 */
 	public Jugador(String nombre, Integer vida, boolean fumador, double alturaMetros) {
-		super();
 		this.nombre = nombre;
 		this.vida = vida;
 		this.fumador = fumador;
