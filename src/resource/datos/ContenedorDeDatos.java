@@ -25,7 +25,7 @@ public final class ContenedorDeDatos {
 	/**
 	 * Constante que contiene un simple texto.
 	 */
-	private final String texto = Messages.getString("ContenedorDeDatos.0"); //$NON-NLS-1$
+	private final String texto = Messages.getString("ContenedorDeDatos.0");
 	
 	/**
 	 * Variable que contiene una lista con nombres y dos apellidos.
