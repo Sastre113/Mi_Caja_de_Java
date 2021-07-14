@@ -37,11 +37,34 @@ public enum EMensaje {
 	private int getId() {
 		return id;
 	}
+	 
+	public String getECodigo() {
+		StringBuilder msg = new StringBuilder();
+		
+		if(this.getId() == 0) {
+			msg.append(ECodigo.OK.toString());
+		} else if(this.getId() == 1) {
+			msg.append(ECodigo.EV.toString());
+		} else {
+			msg.append(ECodigo.KO.toString());
+		}
+		
+		return msg.append(String.format("_%s", this.getId())).toString();
+	}
+	
+	public String getDescripcion() {
+		return Messages.getString(this.getValue());
+	}
+	
+	private String getDondeFalla() {
+		StackTraceElement element = new Exception().getStackTrace()[2];
+		return String.format("[%s -> %s]", element.getFileName(),element.getMethodName()); 
+	}
 	
 	public String getMsg() {
-		StackTraceElement element = new Exception().getStackTrace()[1];
-		StringBuilder msg = new StringBuilder(String.format("[%s -> %s] ", element.getFileName(),element.getMethodName()));
-		msg.append(Messages.getString(this.getValue()));
+		StringBuilder msg = new StringBuilder(this.getECodigo());
+		msg.append(this.getDondeFalla());
+		msg.append(this.getDescripcion());
 		return msg.toString();
 	}
 }
