@@ -13,7 +13,6 @@ public class Main {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		level1();
 	}
 	
@@ -27,7 +26,10 @@ public class Main {
 	}
 	
 	static void level3() {
-		System.out.println(EMensaje.PT_EXITO.getMsg());
+		
+		System.out.println(String.format("%s", EMensaje.PT_EXITO.getMsg()));
+		System.out.println(String.format("%s", EMensaje.PT_FRACASO.getMsg()));
+		
 	}
 
 }
