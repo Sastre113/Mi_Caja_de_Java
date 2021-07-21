@@ -1,7 +1,7 @@
 /**
  * 
  */
-package main.Laboratorio.Reflection.EnumsYReflection;
+package main.Laboratorio.Reflection.i18nConEnums;
 
 /**
  * Clase que almacena códigos simple de respuesta para las peticiones.

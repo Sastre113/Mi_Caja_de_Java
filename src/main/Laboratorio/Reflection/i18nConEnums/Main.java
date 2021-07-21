@@ -1,7 +1,7 @@
 /**
  * 
  */
-package main.Laboratorio.Reflection.EnumsYReflection;
+package main.Laboratorio.Reflection.i18nConEnums;
 
 import java.util.ArrayList;
 import java.util.List;

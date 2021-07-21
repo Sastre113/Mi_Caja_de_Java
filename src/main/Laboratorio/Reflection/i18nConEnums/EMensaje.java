@@ -1,9 +1,8 @@
 /**
  * 
  */
-package main.Laboratorio.Reflection.EnumsYReflection;
+package main.Laboratorio.Reflection.i18nConEnums;
 
-import main.utils.Messages;
 
 /**
  * Clase donde se recogen todos los mensajes de información de una aplicación.
