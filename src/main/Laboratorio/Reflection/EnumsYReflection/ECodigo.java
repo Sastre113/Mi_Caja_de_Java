@@ -9,9 +9,9 @@ package main.Laboratorio.Reflection.EnumsYReflection;
  */
 public enum ECodigo {
 	
-	OK("Todo Ok."),
-	EV("Fallo en validación"),
-	KO("KO");
+	OK("OK"),
+	EV("Error en validación"),
+	KO("Error en ejecución");
 	
 	private String value;
 

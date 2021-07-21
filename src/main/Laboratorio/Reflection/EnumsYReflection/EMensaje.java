@@ -9,16 +9,23 @@ import main.utils.Messages;
  * @author Miguel Á. Sastre <sastre113@gmail.com>
  * @version 13 jul. 2021, 0:13:26
  */
+
+@SuppressWarnings("unused")
 public enum EMensaje {
 
 	
-	// Genéricas
+	// OK
 	PT_EXITO	(0,"info.exito"),
+	PT_CORRECTA (1,"info.peticion.correcta"),
+	
+	// EV
 	PT_VACIA	(1000,"error.peticion.vacia"),
 	ALTA_EMAIL_NO_VALIDO (1001,"error.alta.emailNoValido"),
 	ALTA_NIF_NO_VALIDO (1002,"error.alta.nifNoValido"),
 	BANK_EMAIL_DOCUMENTO_DUPLICADO (1003,"error.bank.documentoDuplicado"),
 	USUARIO_ERROR_AUTENTIFICACION (1004,"error.usuario.autenticacioErronea"),
+	
+	// KO
 	PT_FRACASO	(2000,"error.peticion.fracaso");
 	
 	
@@ -26,7 +33,7 @@ public enum EMensaje {
 	/** Identificador del error */
 	private int id;
 	/** Nombre de variable que almacena su descripción*/
-	private String value;
+	private String contenedor;
 	/** ECodigo correspondiente al id*/
 	private ECodigo codigo;
 	
@@ -46,7 +53,7 @@ public enum EMensaje {
 	 */
 	private EMensaje(int id, String value) {
 		this.id = id;
-		this.value = value;
+		this.contenedor = value;
 		this.codigo = this.getECodigo(id);
 	}
 
@@ -71,11 +78,12 @@ public enum EMensaje {
 	}
 	
 	/**
-	 * Método que devuelve la descripcion
-	 * @return cadena de texto
+	 * Método que devuelve el mensaje almacenado en las variables de messages.properties.
+	 * 
+	 * @return mensaje
 	 */
 	public String getDescripcion() {
-		return Messages.getString(this.getValue());
+		return Messages.getString(this.getContenedor());
 	}
 	
 	/**
@@ -85,7 +93,16 @@ public enum EMensaje {
 	 * @return mensaje construido 
 	 */
 	public String getMsg() {
-		return String.format("{ %s - %s %s }", this.getCodigoError(),this.getDondeFalla(),this.getDescripcion());
+		String msg;
+		String dondeFalla = getDondeFalla();
+		
+		if(!dondeFalla.isEmpty()) {
+			msg = String.format("{ %s - %s %s }", this.getCodigoError(),dondeFalla,this.getDescripcion());
+		} else {
+			msg = String.format("{ %s - %s }", this.getCodigoError(),this.getDescripcion());
+		}
+		
+		return msg;
 	}
 	
 	/**
@@ -100,40 +117,43 @@ public enum EMensaje {
 	/**
 	 * Método que construye un mensaje desde donde se ha llamado. Se indicará mediante el archivo .java y
 	 * el método donde ha fallado.
-	 * El mensaje se construye si corresponde con EV o KO.
+	 * El mensaje se construye si corresponde con EV.
 	 * 
 	 * @return mensaje construido con el nombre del archivo y el método.
 	 */
 	private String getDondeFalla() {
-		if(this.getId() != 0) {
+		String msgDondeFalla = "";
+		
+		if(this.getCodigo()  == ECodigo.EV) {
 			StackTraceElement element = new Exception().getStackTrace()[2];
-			return String.format("[%s -> %s]", element.getFileName(),element.getMethodName()); 
-		} else {
-			return "";
+			msgDondeFalla =  String.format("[%s -> %s]", element.getFileName(),element.getMethodName()); 
 		}
 		
+		return msgDondeFalla;
 	}
 	
 	/**
+	 * Getter id
 	 * 
-	 * @return int
+	 * @return valor entero que indica el identificador del EMensaje
 	 */
 	private int getId() {
 		return id;
 	}
 	
 	/**
-	 * @return the eCodigo
+	 * Getter codigo
+	 * 
+	 * @return ECodigo que corresponde a la instancia de EMensaje
 	 */
 	private ECodigo getCodigo() {
 		return codigo;
 	}
-	
+
 	/**
-	 * 
-	 * @return String 
+	 * @return nombre de la variable en messages.properties
 	 */
-	private String getValue() {
-		return value;
-	}
+	private String getContenedor() {
+		return contenedor;
+	}	
 }
