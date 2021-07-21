@@ -89,14 +89,7 @@ public enum EMensaje {
 		return eCodigo;
 	}
 	
-	/**
-	 * Método que devuelve el mensaje almacenado en las variables de messages.properties.
-	 * 
-	 * @return mensaje
-	 */
-	public String getDescripcion() {
-		return Messages.getString(this.getContenedor());
-	}
+	
 	
 	/**
 	 * Método que construye un mensaje de error completo, donde se indica codigo de error, donde ha fallado
@@ -115,6 +108,15 @@ public enum EMensaje {
 		}
 		
 		return msg;
+	}
+	
+	/**
+	 * Método que devuelve el mensaje almacenado en las variables de messages.properties.
+	 * 
+	 * @return mensaje
+	 */
+	private String getDescripcion() {
+		return Messages.getString(this.getContenedor());
 	}
 	
 	/**
