@@ -4,6 +4,8 @@
 package main.Laboratorio.Reflection.EnumsYReflection;
 
 /**
+ * Clase que almacena códigos simple de respuesta para las peticiones.
+ * 
  * @author Miguel Á. Sastre <sastre113@gmail.com>
  * @version 14 jul. 2021, 21:42:39
  */

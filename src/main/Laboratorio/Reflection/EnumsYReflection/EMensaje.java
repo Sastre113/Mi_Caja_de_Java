@@ -6,6 +6,18 @@ package main.Laboratorio.Reflection.EnumsYReflection;
 import main.utils.Messages;
 
 /**
+ * Clase donde se recogen todos los mensajes de información de una aplicación.
+ * Los que se almacena en esta clase será el identificador del mensaje y el nombre de la variable
+ * en messages.properties. Esto nos permite usar i18n y solo tener que modificar en 1 punto.
+ * 
+ * Además de el almacen donde estarán las constantes, se construye el mensaje de información para las 
+ * peticiones.
+ * 
+ * El formato establecido es:
+ * 		{ ECodigo_id - {[FileName -> MethodName]} Mensaje } 
+ *		Ejemplos: A. { OK_0 - Exito }
+ *				  B. { EV_1003 - [Main.java -> level2] Documento duplicado. }
+ * 
  * @author Miguel Á. Sastre <sastre113@gmail.com>
  * @version 13 jul. 2021, 0:13:26
  */
