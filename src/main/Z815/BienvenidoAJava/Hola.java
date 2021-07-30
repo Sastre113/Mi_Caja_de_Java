@@ -9,6 +9,7 @@ package main.Z815.BienvenidoAJava;
  */
 public class Hola {
 
+	// Esto es una prueba
 	public static void main(String[] args) {
 		System.out.println("Hi!");
 	}
