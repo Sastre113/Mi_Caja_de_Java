@@ -14,8 +14,9 @@ package main.Laboratorio.Reflection.i18nConEnums;
  * 
  * El formato establecido es:
  * 		{ ECodigo_id - {[FileName -> MethodName]} Mensaje } 
- *		Ejemplos: A. { OK_0 - Exito }
- *				  B. { EV_1003 - [Main.java -> level2] Documento duplicado. }
+ *	
+ * Ejemplos: A. { OK_0 - Exito }
+ *			 B. { EV_1003 - [Main.java -> level2] Documento duplicado. }
  * 
  * @author Miguel Á. Sastre <sastre113@gmail.com>
  * @version 13 jul. 2021, 0:13:26
