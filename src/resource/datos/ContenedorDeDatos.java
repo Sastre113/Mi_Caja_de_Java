@@ -12,13 +12,13 @@ import java.util.Random;
 import main.utils.Messages;
 
 /**
- * @author Miguel Á. Sastre <sastre113@gmail.com>
+ * @author Miguel ï¿½. Sastre <sastre113@gmail.com>
  * @version 18 jun. 2021, 20:43:05
  */
 public final class ContenedorDeDatos {
 
 	/**
-	 * Constante que contiene el tamaño máximo de las listas generadas aleatoriamente.
+	 * Constante que contiene el tamaï¿½o mï¿½ximo de las listas generadas aleatoriamente.
 	 */
 	private final int MAX_VALOR_LISTA = 100;
 	
@@ -31,19 +31,19 @@ public final class ContenedorDeDatos {
 	 * Variable que contiene una lista con nombres y dos apellidos.
 	 */
 	private final List<String> listaNombresApellidos = new ArrayList<>(
-			Arrays.asList("Áurea Gabriel Quijano", "Ovidia Flavio Arriola", "Violeta Adelia Ojeda", 
-					"Norberto Margarita Domínguez", "María José Rosa María Villa", "Aurora Valeria Casales", 
-					"Silvio Rodolfo Machado", "Donato Dolores Figueroa", "Rosaura Pastor Ureña", "Justino Sofía Araujo", 
-					"José Antonio Maricruz Villaverde", "Ana María Marciano Márquez", "José Ángel Ariel Roldán",
-					"Francisco Javier Alejandra María", "Mireya Vinicio Muñoz", "Rosalva Regina Torres", 
-					"Norberto Kike Iglesias", "Heriberto Héctor Pantoja", "Pacífica Jennifer Contreras", 
-					"Ginés Ofelia Basurto")); 
+			Arrays.asList("ï¿½urea Gabriel Quijano", "Ovidia Flavio Arriola", "Violeta Adelia Ojeda", 
+					"Norberto Margarita Domï¿½nguez", "Marï¿½a Josï¿½ Rosa Marï¿½a Villa", "Aurora Valeria Casales", 
+					"Silvio Rodolfo Machado", "Donato Dolores Figueroa", "Rosaura Pastor Ureï¿½a", "Justino Sofï¿½a Araujo", 
+					"Josï¿½ Antonio Maricruz Villaverde", "Ana Marï¿½a Marciano Mï¿½rquez", "Josï¿½ ï¿½ngel Ariel Roldï¿½n",
+					"Francisco Javier Alejandra Marï¿½a", "Mireya Vinicio Muï¿½oz", "Rosalva Regina Torres", 
+					"Norberto Kike Iglesias", "Heriberto Hï¿½ctor Pantoja", "Pacï¿½fica Jennifer Contreras", 
+					"Ginï¿½s Ofelia Basurto")); 
 	/**
 	 * Variable que contiene una lista de nombres.
 	 */
-	private final List<String> listaNombres = new ArrayList<>(Arrays.asList("Bernabé ", "Yolanda", "Lorena", "Nacho", 
-			"Isaías", "Aitana", "José ", "Angélia", "Catalina", "Sabina", "Raimundo", "Jorge", "Abril", "Ismael", 
-			"Alexis", "Adelardo", "Fernando", "Rolando", "Matías", "Jenifer")); 
+	private final List<String> listaNombres = new ArrayList<>(Arrays.asList("Bernabï¿½ ", "Yolanda", "Lorena", "Nacho", 
+			"Isaï¿½as", "Aitana", "Josï¿½ ", "Angï¿½lia", "Catalina", "Sabina", "Raimundo", "Jorge", "Abril", "Ismael", 
+			"Alexis", "Adelardo", "Fernando", "Rolando", "Matï¿½as", "Jenifer")); 
 	
 	
 	/**
@@ -53,7 +53,7 @@ public final class ContenedorDeDatos {
 	
 	
 	/**
-	 * Método que genera un número decimal. 
+	 * Mï¿½todo que genera un nï¿½mero decimal. 
 	 * @return
 	 */
 	public double getDoubleAleatorio() {
@@ -61,7 +61,7 @@ public final class ContenedorDeDatos {
 	}
 	
 	/**
-	 * Método que genera un número entero.
+	 * Mï¿½todo que genera un nï¿½mero entero.
 	 * @return
 	 */
 	public int getIntAleatorio() {
@@ -69,7 +69,7 @@ public final class ContenedorDeDatos {
 	}
 	
 	/**
-	 * Método que genera un número con un rango máximo establecido.
+	 * Mï¿½todo que genera un nï¿½mero con un rango mï¿½ximo establecido.
 	 * @param maxValor
 	 * @return
 	 */
@@ -78,7 +78,7 @@ public final class ContenedorDeDatos {
 	}
 	
 	/**
-	 * Método que genera un número entero positivo. 
+	 * Mï¿½todo que genera un nï¿½mero entero positivo. 
 	 * @return
 	 */
 	public int getIntAleatorioPositivo() {
@@ -86,7 +86,7 @@ public final class ContenedorDeDatos {
 	}
 	
 	/**
-	 * Método que genera un número entero negativo.
+	 * Mï¿½todo que genera un nï¿½mero entero negativo.
 	 * @param maxValor
 	 * @return
 	 */
@@ -95,7 +95,7 @@ public final class ContenedorDeDatos {
 	}
 	
 	/**
-	 * Método que devuelve un nombre.
+	 * Mï¿½todo que devuelve un nombre.
 	 * @return
 	 */
 	public String getNombreAleatorio() {
@@ -103,7 +103,7 @@ public final class ContenedorDeDatos {
 	}
 	
 	/**
-	 * Método que devuelve un nombre y apellidos.
+	 * Mï¿½todo que devuelve un nombre y apellidos.
 	 * @return
 	 */
 	public String getNombreApellidoAleatorio() {
@@ -111,7 +111,7 @@ public final class ContenedorDeDatos {
 	}
 
 	/**
-	 * Método que devuelve una lista con nombres.
+	 * Mï¿½todo que devuelve una lista con nombres.
 	 * @return
 	 */
 	public List<String> getListNombresAleatorios(){
@@ -119,7 +119,7 @@ public final class ContenedorDeDatos {
 	}
 	
 	/**
-	 * Método que devuelve una lista con nombres y apellidos.
+	 * Mï¿½todo que devuelve una lista con nombres y apellidos.
 	 * @return
 	 */
 	public List<String> getListNombresApellidosAleatorios(){
@@ -127,7 +127,7 @@ public final class ContenedorDeDatos {
 	} 
 	
 	/**
-	 * Método 'getter' que devuelve el texto.
+	 * Mï¿½todo 'getter' que devuelve el texto.
 	 * @return
 	 */
 	public String getTexto() {
@@ -135,7 +135,7 @@ public final class ContenedorDeDatos {
 	}
 	
 	/*
-	 * Métodos auxiliares de la clase
+	 * Mï¿½todos auxiliares de la clase
 	 */
 	
 	
@@ -147,10 +147,10 @@ public final class ContenedorDeDatos {
 		return this.getIntAleatorio(this.getListaNombresApellidos().size());
 	}
 	
-	private List<String> getLista(int opcion, int tamañoLista){
+	private List<String> getLista(int opcion, int sizeList){
 		List<String> list = new ArrayList<>();
 
-		for(int i = 0; i < tamañoLista; i++) {
+		for(int i = 0; i < sizeList; i++) {
 			switch(opcion) {
 			case 0:
 				list.add(this.getNombreAleatorio());
@@ -159,7 +159,7 @@ public final class ContenedorDeDatos {
 				list.add(this.getNombreApellidoAleatorio());
 				break;
 			default:
-				System.err.println(String.format("No se ha añadido ningún valor en la iteracción %d.\n",i));
+				System.err.println(String.format("No se ha aï¿½adido ningï¿½n valor en la iteracciï¿½n %d.\n",i));
 			} 
 			
 		}
