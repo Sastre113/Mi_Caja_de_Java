@@ -5,6 +5,7 @@ package main.Laboratorio.Reflection.TreeFunction;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.util.TreeMap;
 import java.util.TreeSet;
 import java.util.concurrent.ExecutionException;
 
@@ -19,6 +20,11 @@ public class Demo {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		TreeMap<String, String> treeMap = new TreeMap<>();
+		
+
+		
+		
 		ClaseConMetodos clazz = new ClaseConMetodos();
 		TreeSet<Method> tree = new TreeSet<>();
 		
