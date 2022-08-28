@@ -26,19 +26,23 @@ public class ClaseConMetodos {
 		});
 	}
 	
-	public void primer(String id) {
-		System.out.println(String.format("imprimeAlgo::%s", id));
+	public Void primer() {
+		System.out.println(String.format("imprimeAlgo::%s", "1"));		
+		return null;
 	}
 	
-	public void dependeDePrimerA(String id) {
-		System.out.println(String.format("doSomethig::%s", id));
+	public Void dependeDePrimerA() {
+		System.out.println(String.format("doSomethig::%s", "2"));
+		return null;
 	}
 	
-	public void dependeDePrimerB(String id) {
-		System.out.println(String.format("getPais::%s", id));
+	public Void dependeDePrimerB() {
+		System.out.println(String.format("getPais::%s", "3"));
+		return null;
 	}
 	
-	public void dependeDePrimerBSegundo(String id) {
-		System.out.println(String.format("getNom::%s", id));
+	public Void dependeDePrimerBSegundo() {
+		System.out.println(String.format("getNom::%s", "4"));
+		return null;
 	}
 }

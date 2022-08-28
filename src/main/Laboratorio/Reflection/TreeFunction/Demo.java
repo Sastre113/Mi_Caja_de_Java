@@ -3,11 +3,12 @@
  */
 package main.Laboratorio.Reflection.TreeFunction;
 
-import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.util.Map.Entry;
+import java.util.Set;
 import java.util.TreeMap;
-import java.util.TreeSet;
 import java.util.concurrent.ExecutionException;
+import java.util.function.Function;
 
 /**
  * @author Miguel Á. Sastre <sastre113@gmail.com>
@@ -15,46 +16,24 @@ import java.util.concurrent.ExecutionException;
  */
 public class Demo {
 
-	/**
-	 * @param args
-	 */
+	private static TreeMap<Integer, Function<ClaseConMetodos, Void>> treeMap = new TreeMap<>();
+	
+	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		TreeMap<String, String> treeMap = new TreeMap<>();
+		treeMap.put(1, ClaseConMetodos::primer);
+		treeMap.put(2, ClaseConMetodos::dependeDePrimerA);
+		treeMap.put(3, ClaseConMetodos::dependeDePrimerB);
+		treeMap.put(4, ClaseConMetodos::dependeDePrimerBSegundo);
 		
-
-		
-		
-		ClaseConMetodos clazz = new ClaseConMetodos();
-		TreeSet<Method> tree = new TreeSet<>();
-		
-		try {
-			tree.add(alimentarTree("primer"));
-			tree.add(alimentarTree("dependeDePrimeraA"));
-			tree.add(alimentarTree("dependeDePrimerB"));
-			tree.add(alimentarTree("dependeDePrimerBSegundo"));
-		} catch (ExecutionException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-		
-		for(Method met : tree) {
-			try {
-				met.invoke(null,null);
-			} catch (IllegalAccessException | IllegalArgumentException | InvocationTargetException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}	
-		}
+		ejecutarMetodos(treeMap);
+		System.out.println(treeMap);
 	}
+
 	
-	
-	public static Method alimentarTree(String nombreMethod) throws ExecutionException {
-		try {
-			return ClaseConMetodos.class.getMethod(nombreMethod, String.class);
-		} catch (NoSuchMethodException | SecurityException e) {
-			throw new ExecutionException(e);
+	private static void ejecutarMetodos(TreeMap<Integer, Function<ClaseConMetodos, Void>> treeMap) {
+		
+		for(Entry<Integer, Function<ClaseConMetodos, Void>> key : treeMap.entrySet()) {
+			key.getValue().apply((ClaseConMetodos) key.getValue());
 		}
 	}
 }
