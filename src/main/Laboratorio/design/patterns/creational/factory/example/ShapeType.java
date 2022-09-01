@@ -1,5 +1,10 @@
 package main.Laboratorio.design.patterns.creational.factory.example;
 
+import java.lang.reflect.InvocationTargetException;
+import java.util.function.Supplier;
+
+import javax.management.RuntimeErrorException;
+
 /**
  * 
  * @author Miguel Á. Sastre <sastre113@gmail.com>
@@ -17,17 +22,6 @@ public enum ShapeType {
 		this.clazz = clazz;
 	}
 
-	public static <T extends Shape> T getInstanceOf(String shape) {
-		if (shape == null) {
-			throw new IllegalArgumentException("El parámetro de entrada no puede ser nulo");
-		}
-		
-		ShapeType shapeType = getShapeType(shape);
-		
-		
-		return shapeType.getInstanceOf(shape);
-	}
-
 	public static ShapeType getShapeType(String shape) {
 		for (ShapeType shapeType : ShapeType.values()) {
 			if (shapeType.name().equals(shape)) {
@@ -37,9 +31,26 @@ public enum ShapeType {
 
 		throw new IllegalArgumentException("Parámetro no reconocido");
 	}
+	
+	public static <T extends Shape> T getInstanceOf(String shape) {
+		return ShapeType.getInstanceOf(ShapeType.getShapeType(shape));
+	}
+	
+	public static <T extends Shape> T getInstanceOf(ShapeType shape) {
+		return shape.getInstanceOf();
+	}
+ 
+	public <T extends Shape> T getInstanceOf() {
+		try {
+			return (T) this.getClazz().getDeclaredConstructor().newInstance();
+		} catch (InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException
+				| NoSuchMethodException | SecurityException e) {
+			// TODO Auto-generated catch block
+			throw new RuntimeException(e);
+		}
+	}
 
 	public Class<? extends Shape> getClazz() {
 		return clazz;
 	}
-	
 }

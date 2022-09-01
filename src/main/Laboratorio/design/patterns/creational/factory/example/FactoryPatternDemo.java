@@ -25,5 +25,7 @@ public class FactoryPatternDemo {
 
 	      //call draw method of square
 	      shape3.draw();
+	      
+	      ShapeType.getShapeType("SQUARE").getInstanceOf().draw();
 	   }
 	}
