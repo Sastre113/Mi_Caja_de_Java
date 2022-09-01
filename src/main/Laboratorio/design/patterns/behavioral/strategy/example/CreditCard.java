@@ -3,10 +3,6 @@
  */
 package main.Laboratorio.design.patterns.behavioral.strategy.example;
 
-/**
- * @author Miguel Á. Sastre <sastre113@gmail.com>
- * @version 7 jun 2022, 21:02:46
- */
 public class CreditCard {
     private int amount;
     private String number;

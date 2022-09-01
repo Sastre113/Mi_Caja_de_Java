@@ -3,11 +3,6 @@
  */
 package main.Laboratorio.design.patterns.behavioral.strategy.example;
 
-/**
- * @author Miguel Á. Sastre <sastre113@gmail.com>
- * @version 7 jun 2022, 21:03:13
- */
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
