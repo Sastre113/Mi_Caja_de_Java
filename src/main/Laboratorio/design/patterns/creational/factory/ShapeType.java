@@ -1,9 +1,6 @@
-package main.Laboratorio.design.patterns.creational.factory.example;
+package main.Laboratorio.design.patterns.creational.factory;
 
 import java.lang.reflect.InvocationTargetException;
-import java.util.function.Supplier;
-
-import javax.management.RuntimeErrorException;
 
 /**
  * 
@@ -45,7 +42,6 @@ public enum ShapeType {
 			return (T) this.getClazz().getDeclaredConstructor().newInstance();
 		} catch (InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException
 				| NoSuchMethodException | SecurityException e) {
-			// TODO Auto-generated catch block
 			throw new RuntimeException(e);
 		}
 	}

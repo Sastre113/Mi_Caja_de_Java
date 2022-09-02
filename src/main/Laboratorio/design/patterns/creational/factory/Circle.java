@@ -1,7 +1,7 @@
 /**
  * 
  */
-package main.Laboratorio.design.patterns.creational.factory.example;
+package main.Laboratorio.design.patterns.creational.factory;
 
 public class Circle implements Shape {
 	@Override

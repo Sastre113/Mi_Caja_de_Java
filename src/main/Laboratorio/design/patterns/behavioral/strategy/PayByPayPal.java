@@ -1,4 +1,4 @@
-package main.Laboratorio.design.patterns.behavioral.strategy.example;
+package main.Laboratorio.design.patterns.behavioral.strategy;
 
 
 import java.io.BufferedReader;

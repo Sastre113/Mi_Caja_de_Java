@@ -1,7 +1,7 @@
 /**
  * 
  */
-package main.Laboratorio.design.patterns.behavioral.strategy.example;
+package main.Laboratorio.design.patterns.behavioral.strategy;
 
 public class CreditCard {
     private int amount;

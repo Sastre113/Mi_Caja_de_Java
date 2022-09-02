@@ -1,4 +1,4 @@
-package main.Laboratorio.design.patterns.creational.factory.example;
+package main.Laboratorio.design.patterns.creational.factory;
 
 /**
  * 

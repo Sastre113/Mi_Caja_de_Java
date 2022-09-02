@@ -1,7 +1,7 @@
 /**
  * 
  */
-package main.Laboratorio.design.patterns.behavioral.strategy.example;
+package main.Laboratorio.design.patterns.behavioral.strategy;
 
 /**
  * @author Miguel Á. Sastre <sastre113@gmail.com>
