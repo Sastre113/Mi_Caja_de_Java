@@ -14,8 +14,8 @@ import java.lang.annotation.Target;
  * @author Miguel Á. Sastre <sastre113@gmail.com>
  * @version 4 jun 2022, 20:03:17
  */
-@Retention(RetentionPolicy.RUNTIME)  
+@Retention(RetentionPolicy.CLASS)  
 @Target(ElementType.FIELD)  
 public @interface TestContainerQuerySQL {
-	public String key() default "pepe";
+	String sql() default "pepe";
 }
