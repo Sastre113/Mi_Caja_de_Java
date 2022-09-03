@@ -29,20 +29,20 @@ public enum ShapeType {
 		throw new IllegalArgumentException("Parámetro no reconocido");
 	}
 	
-	public static <T extends Shape> T getInstanceOf(String shape) {
+	public static Shape getInstanceOf(String shape) {
 		return ShapeType.getInstanceOf(ShapeType.getShapeType(shape));
 	}
 	
-	public static <T extends Shape> T getInstanceOf(ShapeType shape) {
+	public static Shape getInstanceOf(ShapeType shape) {
 		return shape.getInstanceOf();
 	}
  
-	public <T extends Shape> T getInstanceOf() {
+	public Shape getInstanceOf() {
 		try {
-			return (T) this.getClazz().getDeclaredConstructor().newInstance();
+			return this.getClazz().getDeclaredConstructor().newInstance();
 		} catch (InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException
 				| NoSuchMethodException | SecurityException e) {
-			throw new RuntimeException(e);
+			throw new RuntimeException(e.getCause());
 		}
 	}
 
