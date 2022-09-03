@@ -8,7 +8,7 @@ package main.Laboratorio.Anotaciones;
  * @version 4 jun 2022, 20:12:28
  */
 
-public class testAnnotacion {
+public class Demo {
 
 	/**
 	 * @param args
