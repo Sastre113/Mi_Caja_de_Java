@@ -3,11 +3,8 @@
  */
 package main.Laboratorio.Reflection.TreeFunction;
 
-import java.lang.reflect.Method;
 import java.util.Map.Entry;
-import java.util.Set;
 import java.util.TreeMap;
-import java.util.concurrent.ExecutionException;
 import java.util.function.Function;
 
 /**

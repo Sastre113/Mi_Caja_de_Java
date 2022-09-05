@@ -5,11 +5,8 @@ package main.Laboratorio.FunctionalProgramming.Function;
 
 /**
  * @author Miguel Á. Sastre <sastre113@gmail.com>
- * @version 5 sept 2022, 21:17:37
+ * @version 5 sept 2022, 21:18:13
  */
-public class Demo {
-
-	public static void main(String[] args) {
-	}
+public class ClaseConFunciones {
 
 }
