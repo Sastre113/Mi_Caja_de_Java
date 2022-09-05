@@ -9,4 +9,11 @@ package main.Laboratorio.FunctionalProgramming.Function;
  */
 public class ClaseConFunciones {
 
+	public void fx() {
+		System.out.println("Ejecutando Fx");
+	}
+	
+	public void gx() {
+		System.out.println("Ejecutando Gx");
+	}
 }

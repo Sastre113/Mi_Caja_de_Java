@@ -1,5 +1,6 @@
 package main.Laboratorio.FunctionalProgramming.Function.Method;
 
+
 public class ClaseConFunciones {
 	
 	public void fx() {
