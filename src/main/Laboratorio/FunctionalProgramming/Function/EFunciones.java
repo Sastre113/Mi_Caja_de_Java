@@ -11,40 +11,31 @@ public enum EFunciones implements IFx{
 
 	FX{
 		@Override
-		public void ejecutar() {
+		public void ejecutar(String id) {
 			// TODO Auto-generated method stub
-			super.getId();
-			System.out.println("Ejecutando FX...");
+			super.auxiliarFx();
 		}
-		
 	},
 	GX{
 		@Override
-		public void ejecutar() {
+		public void ejecutar(String id) {
 			// TODO Auto-generated method stub
-			System.out.println("Ejecutando  GX...");
+			
 		}
-		
 	},
 	HX{
-
 		@Override
-		public void ejecutar() {
+		public void ejecutar(String id) {
 			// TODO Auto-generated method stub
-			System.out.println("Ejecutando  HX...");
+			this.auxiliarHX();
 		}
 		
+		private void auxiliarHX() {
+			System.out.println("Método propio de HX");
+		}
 	};
 	
-	private String id;
-
-	public String getId() {
-		return id;
+	private void auxiliarFx() {
+		System.out.println("Método común en EFunciones");
 	}
-
-	public void setId(String id) {
-		this.id = id;
-	}
-	
-	
 }

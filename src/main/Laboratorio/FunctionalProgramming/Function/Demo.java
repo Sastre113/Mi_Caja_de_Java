@@ -17,9 +17,8 @@ public class Demo {
 		List<EFunciones> listaFunciones = new ArrayList<>();
 		listaFunciones.add(EFunciones.FX);
 		listaFunciones.add(EFunciones.HX);
-		
-		
-		listaFunciones.forEach(funcion -> funcion.ejecutar());
+		listaFunciones.forEach(funcion -> funcion.ejecutar(null));
 	}
+	
 
 }
