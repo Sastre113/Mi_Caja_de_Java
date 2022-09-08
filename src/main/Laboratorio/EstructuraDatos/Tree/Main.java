@@ -1,7 +1,7 @@
 /**
  * 
  */
-package main.Laboratorio.Tree;
+package main.Laboratorio.EstructuraDatos.Tree;
 
 /**
  * @author Miguel Á. Sastre <sastre113@gmail.com>
