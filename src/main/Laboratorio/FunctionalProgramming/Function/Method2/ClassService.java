@@ -8,6 +8,10 @@ import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Optional;
 
+import main.Laboratorio.FunctionalProgramming.Function.Method2.ClasesAuxiliares.EntidadDB;
+import main.Laboratorio.FunctionalProgramming.Function.Method2.ClasesAuxiliares.ObjectoComplejo;
+import main.Laboratorio.FunctionalProgramming.Function.Method2.ClasesAuxiliares.Respuesta;
+
 /**
  * @author Miguel Á. Sastre <sastre113@gmail.com>
  * @version 13 sept 2022, 22:24:08

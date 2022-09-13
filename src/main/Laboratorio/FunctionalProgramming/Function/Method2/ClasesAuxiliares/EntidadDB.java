@@ -1,7 +1,7 @@
 /**
  * 
  */
-package main.Laboratorio.FunctionalProgramming.Function.Method2;
+package main.Laboratorio.FunctionalProgramming.Function.Method2.ClasesAuxiliares;
 
 import java.util.List;
 

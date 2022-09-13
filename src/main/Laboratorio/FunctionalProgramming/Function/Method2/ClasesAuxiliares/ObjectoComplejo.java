@@ -1,7 +1,7 @@
 /**
  * 
  */
-package main.Laboratorio.FunctionalProgramming.Function.Method2;
+package main.Laboratorio.FunctionalProgramming.Function.Method2.ClasesAuxiliares;
 
 /**
  * @author Miguel Á. Sastre <sastre113@gmail.com>

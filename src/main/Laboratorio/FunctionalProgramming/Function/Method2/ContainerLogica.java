@@ -3,6 +3,9 @@
  */
 package main.Laboratorio.FunctionalProgramming.Function.Method2;
 
+import main.Laboratorio.FunctionalProgramming.Function.Method2.ClasesAuxiliares.ObjectoComplejo;
+import main.Laboratorio.FunctionalProgramming.Function.Method2.ClasesAuxiliares.Respuesta;
+
 /**
  * @author Miguel Á. Sastre <sastre113@gmail.com>
  * @version 13 sept 2022, 22:33:04
