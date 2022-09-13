@@ -43,8 +43,7 @@ public class CircularList<T> implements List<T>{
 
 	@Override
 	public boolean isEmpty() {
-		// TODO Auto-generated method stub
-		return false;
+		return this.size == 0;
 	}
 
 	@Override
