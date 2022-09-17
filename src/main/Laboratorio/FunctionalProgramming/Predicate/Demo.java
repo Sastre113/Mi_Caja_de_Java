@@ -16,11 +16,23 @@ public class Demo {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Predicate<String> miPredicate = t -> t.equals("pepe");
-		Predicate<String> miPredicateMethodReference = Demo::miFuncionPredicate;
+		Predicate<String> miPredicateImplement = new Predicate<String>() {
+
+			@Override
+			public boolean test(String t) {
+				return t.equals("pepe");
+			}
+			
+		};
+			
+		System.out.println("Ejecutando miPredicate: " + miPredicateImplement.test("pepe"));
+		System.out.println("Ejecutando miPredicate: " + miPredicateImplement.test("pepon"));
 		
+		Predicate<String> miPredicate = t -> t.equals("pepe");
 		System.out.println("Ejecutando miPredicate: " + miPredicate.test("pepe"));
 		System.out.println("Ejecutando miPredicate: " + miPredicate.test("pepon"));
+		
+		Predicate<String> miPredicateMethodReference = Demo::miFuncionPredicate;
 		System.out.println("Ejecutando miPredicateMethodReference: " + miPredicateMethodReference.test("pepe"));
 		System.out.println("Ejecutando miPredicateMethodReference: " + miPredicateMethodReference.test("pepon"));
 	}
