@@ -18,10 +18,8 @@ public class Demo {
 		// TODO Auto-generated method stub
 		
 		Consumer<String> miConsumer = new Consumer<String>() {
-			
 			@Override
 			public void accept(String t) {
-				// TODO Auto-generated method stub
 				System.out.println(t);
 			}
 		};
